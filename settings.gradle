@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        maven { url = "https://maven.fabricmc.net/" }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+    // net.fabricmc.fabric-loom is the correct plugin ID for unobfuscated MC 26.x+
+    // (the legacy 'fabric-loom' ID still tries to set up the remap pipeline and breaks)
+    plugins {
+        id 'net.fabricmc.fabric-loom' version '1.17.+'
+    }
+}
+
+rootProject.name = "ryha-client"
